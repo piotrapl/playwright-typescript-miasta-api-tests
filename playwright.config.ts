@@ -13,6 +13,7 @@ export default defineConfig({
 
   use: {
     baseURL: "https://local-gov-units.polandapi.com",
+    ignoreHTTPSErrors: true,
     extraHTTPHeaders: {
       Accept: "application/json"
     }
