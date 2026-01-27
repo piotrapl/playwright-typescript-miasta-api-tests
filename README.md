@@ -4,27 +4,27 @@ Ten projekt prezentuje lekki, ale profesjonalny setup do automatycznych testów 
 
 ## Tech stack
 
-Playwright Test – testy API (bez UI)
+- Playwright Test – testy API (bez UI)
 
-TypeScript – typowanie i czytelność
+- TypeScript – typowanie i czytelność
 
-Node.js / npm
+- Node.js / npm
 
-HTML Report (Playwright)
+- HTML Report (Playwright)
 
 ## Dobre praktyki
 
-testy data-driven
+- testy data-driven
 
-zasada DRY /don'repeat yourself/
+- zasada DRY /don'repeat yourself/
 
-separacja danych testowych od logiki testów
+- separacja danych testowych od logiki testów
 
-czytelne asercje kontraktu API
+- czytelne asercje kontraktu API
 
-raportowanie wyników testów
+- raportowanie wyników testów
 
-gotowe pod CI/CD
+- gotowe pod CI/CD
 
 ## Struktura projektu
 pwrt.ts.API_miasta/
