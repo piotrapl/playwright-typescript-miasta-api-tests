@@ -3,7 +3,8 @@
 Projekt prezentuje lekki, ale profesjonalny projekt do automatycznych testów API oparty o Playwright + TypeScript.
 
 # English abstract:
-_Projekt prezentuje lekki, a jednocześnie profesjonalny projekt do automatycznych testów API, oparty na Playwright + TypeScript._
+_The project presents a lightweight yet professional setup for automated API testing based on Playwright + TypeScript._
+
 ## Tech stack
 
 - Playwright Test – testy API (bez UI)
