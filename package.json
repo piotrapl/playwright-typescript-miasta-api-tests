@@ -1,5 +1,3 @@
-// package.json
-// zawiera on wszystkie informacje niezbędne do uruchomienia testów. 
 {
   "name": "pwrt.ts.api-miasta",
   "version": "1.0.0",
