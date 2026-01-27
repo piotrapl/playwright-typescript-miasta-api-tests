@@ -1,21 +1,30 @@
-import { defineConfig } from "@playwright/test";
+// defineConfig to funkcja do definiowania konfiguracji testów
 
-export default defineConfig({
-  testDir: "./tests",
-  timeout: 30_000,
-  expect: { timeout: 10_000 },
+// Tu zachodzi typowanie kontekstowe ('contextual typing')
+// funkcja defineConfig() nie jest jawnie typowana,
+// ale podlega typowaniu bo już obiekt konfiguracyjny 
+// przekazany do niej jest sprawdzany pod kątem typów
+// dzięki czemu mamy podpowiedzi typów pól (testDir itd.) definiowanych poniżej
 
-  // Built-in report generation
-  reporter: [
-    ["list"],
-    ["html", { open: "never", outputFolder: "playwright-report" }]
-  ],
+  import { defineConfig } from "@playwright/test";
 
-  use: {
-    baseURL: "https://local-gov-units.polandapi.com",
-    ignoreHTTPSErrors: true,
-    extraHTTPHeaders: {
-      Accept: "application/json"
+  export default defineConfig({
+    testDir: "./tests",
+    timeout: 30_000,
+    expect: { timeout: 10_000 },
+
+    // wbudowany generator raportów
+    // definiowana jest tablica - można dodać więcej niż jeden raport 
+    reporter: [
+      ["list"],
+      ["html", { open: "never", outputFolder: "playwright-report" }]
+    ],
+
+    use: {
+      baseURL: "https://local-gov-units.polandapi.com",
+      ignoreHTTPSErrors: true,
+      extraHTTPHeaders: {
+        Accept: "application/json"
+      }
     }
-  }
-});
+  });
