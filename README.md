@@ -1,18 +1,6 @@
-## Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
+### Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
 
 Projekt prezentuje lekki, ale profesjonalny setup do automatycznych testów API oparty o Playwright + TypeScript.
-
-## Struktura projektu
-pwrt.ts.API_miasta/
-├─ package.json
-├─ playwright.config.ts
-├─ tests/
-│  ├─ data/
-│  │  └─ municipalitiesByName.cases.ts
-│  └─ api/
-│     └─ municipalitiesByName.spec.ts
-├─ playwright-report/   (generowany automatycznie)
-└─ README.md
 
 ## Tech stack
 
@@ -24,7 +12,7 @@ pwrt.ts.API_miasta/
 
 - HTML Report (Playwright)
 
-## Dobre praktyki
+## Dobre praktyki (Good practice)
 
 - testy data-driven
 
@@ -38,25 +26,25 @@ pwrt.ts.API_miasta/
 
 - gotowe pod CI/CD
 
-## Co robi ten projekt?
+## Co robi ten projekt? (Purpose of the project)
 
 - Projekt automatycznie testuje endpoint REST API:
 
 GET /api/v1/municipalities/name/{name}
 
-# Testy:
+## Testy (Tests)
 
 - wyszukują dane o miastach po nazwie (Lodz, Lublin)
 
 - weryfikują poprawność odpowiedzi API
 
-# Asercje
+## Asercje (Assertions)
 
 - body zawiera pole "success", o wartości: true
 
 - pole data istnieje i nie jest puste
 
-## Wymagania wstępne
+## Wymagania wstępne (Requirements)
 
 - Node.js 18+
 
