@@ -1,13 +1,13 @@
-### Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
+# Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
 
 Projekt prezentuje lekki, ale profesjonalny projekt do automatycznych testów API oparty o Playwright + TypeScript.
 
-# English abstract:
+### English abstract:
 _The project presents a lightweight yet professional setup for automated API testing based on Playwright + TypeScript._
 
 ## Tech stack
 
-- Playwright Test – testy API (bez UI)
+- Playwright – testy API (bez UI)
 
 - TypeScript – typowanie i czytelność
 
