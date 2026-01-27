@@ -1,6 +1,18 @@
 ## Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
 
-Ten projekt prezentuje lekki, ale profesjonalny setup do automatycznych testów API oparty o Playwright + TypeScript.
+Projekt prezentuje lekki, ale profesjonalny setup do automatycznych testów API oparty o Playwright + TypeScript.
+
+## Struktura projektu
+pwrt.ts.API_miasta/
+├─ package.json
+├─ playwright.config.ts
+├─ tests/
+│  ├─ data/
+│  │  └─ municipalitiesByName.cases.ts
+│  └─ api/
+│     └─ municipalitiesByName.spec.ts
+├─ playwright-report/   (generowany automatycznie)
+└─ README.md
 
 ## Tech stack
 
@@ -26,43 +38,29 @@ Ten projekt prezentuje lekki, ale profesjonalny setup do automatycznych testów 
 
 - gotowe pod CI/CD
 
-## Struktura projektu
-pwrt.ts.API_miasta/
-├─ package.json
-├─ playwright.config.ts
-├─ tests/
-│  ├─ data/
-│  │  └─ municipalitiesByName.cases.ts
-│  └─ api/
-│     └─ municipalitiesByName.spec.ts
-├─ playwright-report/   (generowany automatycznie)
-└─ README.md
-
 ## Co robi ten projekt?
 
-Projekt automatycznie testuje endpoint REST API:
+- Projekt automatycznie testuje endpoint REST API:
 
 GET /api/v1/municipalities/name/{name}
 
 # Testy:
 
-wyszukują dane o miastach po nazwie (Lodz, Lublin)
+- wyszukują dane o miastach po nazwie (Lodz, Lublin)
 
-weryfikują poprawność odpowiedzi API
+- weryfikują poprawność odpowiedzi API
 
 # Asercje
 
-success === true
+- body zawiera pole "success", o wartości: true
 
-pole data istnieje i nie jest puste
+- pole data istnieje i nie jest puste
 
 ## Wymagania wstępne
 
-Node.js 18+
+- Node.js 18+
 
-npm
-
-Dostęp do internetu (API zewnętrzne)
+- npm
 
 ## Jak uruchomić projekt?
 1. Instalacja zależności
@@ -73,11 +71,11 @@ npm test
 
 3. Raport HTML
 
-Po wykonaniu testów raport znajduje się w:
+- Po wykonaniu testów raport znajduje się w:
 
 playwright-report/index.html
 
-Można go otworzyć komendą:
+- Można go otworzyć komendą:
 
 npm run test:report
 
