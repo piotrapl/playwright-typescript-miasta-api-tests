@@ -22,13 +22,19 @@ function assertApiContract(body: ApiResponse) {
   expect(body).toHaveProperty("data");
   const data = body.data;
 
-// W pętli sprawdzamy różne możliwe typy danych w polu data
+// W pętli sprawdzamy różne możliwe typy danych w polu z danymi - 'data' 
   if (Array.isArray(data)) {
     expect(data.length).toBeGreaterThan(0);
   } else if (data && typeof data === "object") {
     expect(Object.keys(data as Record<string, unknown>).length).toBeGreaterThan(0);
   } else {
-    // If API returns a scalar here, treat as empty/invalid for this requirement
+    /* Jeśli API zwraca wartość skalarną, traktujemy to jako puste/nieprawidłowe
+       i asercja nie przejdzie */
+    /* pole data - powinno być albo tablicą, albo obiektem
+       i jesli nie jest, to asercja poniżej zwróci błąd
+       Asercja 3: weryfikujemy, że pole data: 
+          - nie jest null/undefined 
+          - ma długość > 0 */
     expect(data).not.toBeNull();
     expect(data).not.toBeUndefined();
     expect(String(data).trim().length).toBeGreaterThan(0);
@@ -50,3 +56,5 @@ test.describe("GET /api/v1/municipalities/name/{name}", () => {
     });
   }
 });
+
+// String(data).trim().length - trim() usuwa białe znaki z początku i końca łańcucha
