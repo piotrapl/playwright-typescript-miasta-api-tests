@@ -1,6 +1,6 @@
-![CI](https://github.com/piotrapl/playwright-typescript-miasta-api-tests/actions/workflows/playwright.yml/badge.svg)
-
 # Testy serwisu RESTful API dla polskich jednostek samorządu terytorialnego
+
+![CI](https://github.com/piotrapl/playwright-typescript-miasta-api-tests/actions/workflows/playwright.yml/badge.svg)
 
 Projekt prezentuje lekki, ale profesjonalny projekt do automatycznych testów API oparty o Playwright + TypeScript.
 
