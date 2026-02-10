@@ -15,7 +15,7 @@ name: CI - Playwright API Tests
 #   tutaj: workflow będzie uruchamiany 
 #   1. na push do dowolnej gałęzi (branches: ["**"]) 
 #   2. na pull request, czyli gdy ktoś tworzy pull request do tego repozytorium
-oraz na pull request.
+# oraz na pull request.
 on:
   push:
     branches: ["**"]
